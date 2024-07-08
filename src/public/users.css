@@ -1,0 +1,19 @@
+/* 
+Container to wrap the users.
+Make it a flex container with everything stacked in a column.
+Add a blurred background.
+*/
+#users-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--secondary);
+  width: 500px;
+  height: 550px;
+  padding: 30px;
+  margin: 20px;
+  border-radius: 5px;
+}

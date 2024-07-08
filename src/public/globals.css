@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik+Moonrocks');
+/* Create some variables for colors. Import the Moonrocks font from Google using the @import rule. */
+:root {
+  --primary: white;
+  --secondary: rgba(255, 255, 255, 0.5);
+  --tertiary: black;
+  --error: red;
+}
+
+/* CSS reset for all elements */
+* {
+  color: var(--primary);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Rubik Moonrocks;
+}
+
+/* Add the space JPG as the background and center everything. */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url('./space.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: center;
+  background-attachment: fixed;
+}
+
+/* 
+Style the navigation bar so that it is at the top of the page,
+has a transparent background, and logo is on left while the links are
+on the right
+*/
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 16px 32px;
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+}
+
+.navbar > ul {
+  display: flex;
+  list-style-type: none;
+  gap: 40px;
+}
+
+/* Style the logo "Space Travelers" */
+#logo {
+  font-size: 40px;
+  text-decoration: none;
+}
+
+#logo:hover {
+  cursor: pointer;
+}
+
+/* A class to change the underline color on hover */
+.underline-text {
+  text-decoration-color: transparent;
+  text-underline-offset: 8px;
+  transition-property: text-decoration-color;
+  transition-duration: 1s;
+}
+
+.underline-text:hover {
+  text-decoration-color: var(--primary);
+  transition-property: text-decoration-color;
+  transition-duration: 1s;
+}
